@@ -1,3 +1,107 @@
 ---
 
 ---
+<footer>
+    <div class="footer">
+        <div class="left_footer">
+        <h3>KEA - Københavns Erhvervsakademi</h3>
+        <p>Guldbergsgade 29N</p>
+        <p>2200 København N</p>
+        <p>Du skal ikke bare vide.</p>
+        <p>Du skal kunne.</p>
+        <img src="../img/sociale_medier.webp" class="sociale_medier" alt="sociale medier billede">
+    </div>
+    <div class="center_footer">
+        <h3>Vejledning</h3>
+        <p>Studieadministration</p>
+        <p>Studie-og karrierevejledning</p>
+        <p>SPS(specialpædagoisk støtte)</p>
+        <p>SU-vejledning</p>
+        <p>Praktik</p>
+    </div>
+    <div class="center_footer_2">
+        <h3>Relevante links</h3>
+        <p>KEA Webmail</p>
+        <p>KEA Bibliotek</p>
+        <p>Studieviden</p>
+        <p>Itslearning</p>
+        <p>Fag- og modulkatalog</p>
+        <p>Studieaktivitetsmodel</p>
+        <p>PARIS-aftalen</p>
+        <p>Ordensregler</p>
+    </div>
+    <div class="right_footer">
+        <h3>Praktisk info</h3>
+        <p>Cookies og privatliv</p>
+        <p>Persondatapolitik</p>
+        <p>Tilgængelighedserklæring</p>
+        <p>Find vej på KEA</p>
+    </div>
+    </div>
+</footer>
+
+<style>
+    p{
+        color: #FFFFFF;
+        font-size: 12px ;
+        margin-bottom: 20px;
+    }
+
+    h3{
+        color: #FFFFFF;
+        font-size: 14px;
+        margin-top: 50px;
+    }
+    .footer{
+    background-color: rgba(0, 59, 92, 1);
+    text-align: center;
+    padding: 20px;
+    }
+    .sociale_medier{
+        width: 120px;
+        height: auto;
+    }
+    
+
+   @media screen and (min-width: 750px) { 
+p{
+color: #FFFFFF;
+font-size: 12px;
+     }
+
+     .footer {
+    display: flex; /* Flexbox for at organisere elementerne */
+    background-color: rgba(0, 59, 92, 1);
+    padding: 30px;
+}
+h2, h3{
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Stil for venstre sektion */
+.left_footer {
+    flex: 1; /* Optager 1 del af pladsen */
+    text-align: left; /* Venstrestil */
+}
+
+/* Stil for den centrale sektion */
+.center_footer, .center_footer_2 {
+    flex: 1; /* Optager 1 del af pladsen */
+    text-align: center; /* Centrerer tekst */
+}
+
+/* Stil for højre sektion */
+.right_footer {
+    flex: 1; /* Optager 1 del af pladsen */
+    text-align: right; /* Højrestil */
+}
+.sociale_medier{
+width: 150px;
+height: auto;
+margin-left: -14px;
+}
+   }
+
+
+     </style>
