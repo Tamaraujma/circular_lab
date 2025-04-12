@@ -1,3 +1,129 @@
----
+<header>
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="logo"> <img src="/img/kea_logo.webp" alt="kea logo"></div>
+    
 
----
+    </div>
+    <nav>
+      <div class="menu">
+        <a href="#">Forside</a>
+        <a href="#">Events</a>
+      </div>
+    </nav>
+    <div class="header_img"> <img src="/img/header_img.webp" alt="header img">
+  </header>
+  <script src="/js/burgermenu.js" defer></script>
+
+  
+  <style>
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.header_img img {
+  width: 100px;  /* Juster størrelsen, som du ønsker */
+  height: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 59, 92, 1);
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem; /* Optional, for space between burger and logo */
+}
+
+.header_img {
+  margin-left: auto;  /* Push the image to the right */
+}
+
+nav {
+  display: flex;
+  margin-left: auto; /* Push the menu to the right */
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Responsivt */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 59, 92, 1);
+    display: none;
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Burger-menuen vises på skærme under 700px */
+  .burger {
+    display: flex;
+  }
+}
+
+@media (min-width: 700px) {
+  /* Skjul burger-menuen på skærme 700px og større */
+  .burger {
+    display: none;
+  }
+}
+
+  </style>
+  
+  
