@@ -1,4 +1,33 @@
 ---
 
+const { title, path } = Astro.props;
+
+
 ---
 
+<!-- <div class="event_grid">
+    <div class="col_2"><a href="/src/pages/single_view.astro">Torsdagsbar</a></div>
+    <div class="col_3"><a href="/src/pages/single_view.astro">Virksomhedsbesøg</a></div>
+    <div class="col_4"><a href="/src/pages/single_view.astro">Workshop - Design dit eget cirkulær produkt</a></div>
+    <div class="col_5"><a href="/src/pages/single_view.astro">Foredrag - Vid mere om Circular lab</a></div>
+    </div> -->
+    <div class="col_1">
+        <a href={"/" + path}>
+            {title}</a>
+        </div>
+       
+<style>
+
+@media (max-width: 800px) 
+
+  
+
+
+    
+   
+
+    @media (min-width: 800px){
+     
+   
+}
+</style>
