@@ -1,0 +1,67 @@
+---
+//@ts-nocheck
+import Layout from '../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+const url = 'https://whyxbntamuqpfpzulqjo.supabase.co/rest/v1/Events'
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndoeXhibnRhbXVxcGZwenVscWpvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUwNDg2ODAsImV4cCI6MjA2MDYyNDY4MH0.C3cw0uGOqW8nCLMZ3yZfR7HSXKQ-hSaCLsfmeh7g4Io"
+ 
+const options = {
+	headers: {
+		apikey: key,
+	},
+};
+
+const data = await fetch(url, options).then((res) => res.json())
+console.log(data);
+
+  return data.map((event) => {
+    return {
+      params: { slug: event.event_slug },
+      props: { event },
+    };
+  });
+}
+
+const { event } = Astro.props;
+---
+
+<Layout>
+  <div class="event-container">
+      <div>
+        <h1>{event.title}</h1>
+        <p>{event.event_description}</p>
+        <p><strong>Dato:</strong> {event.date}</p>
+        <p><strong>Tid:</strong> {event.start}</p>
+        <p><strong>Sted:</strong> {event.location}</p>
+      </div>
+      <div class="event-img">
+        <img src={`/billedsamling/${event.event_img}`} alt={event.event_title} />
+      </div>
+  </div>
+</Layout>
+
+
+
+<style>
+
+  .event-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #FF7500;
+  padding: 20px;
+  max-width: 1200px;
+    min-height: 400px; 
+  margin: 20px auto;
+}
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+
+
+

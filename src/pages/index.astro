@@ -1,9 +1,154 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
-
 ---
-
 <Layout>
-	
+  <img src="/billedsamling/hero.webp" alt="herosection">
+  <section class="circular-lab">
+    <div>
+    <h1>Circular Lab</h1>
+    <h3>Circular Lab – et fællesskab for cirkulær innovation</h3>
+    <p>
+      Interesserer du dig for bæredygtighed, design og cirkulære løsninger? Circular Lab er et
+      kreativt og åbent rum på KEA, hvor du kan udforske, udvikle og eksperimentere med cirkulære
+      forretningsmodeller og produkter.
+    </p>
+    <p>
+      Vi arrangerer workshops, talks, caféer og virksomhedsbesøg – alt med fokus på den grønne
+      omstilling i både teori og praksis. Lab’et bruges til undervisning, events og samarbejde på
+      tværs af KEAs andre labs. <br />
+      Tjek kalenderen og vær med til at forme fremtidens bæredygtige løsninger!
+    </p> 
+  </div>
+</section>
+
+  <section class="drop-down">
+    <div>
+    <h3>Hvad tilbyder vi?</h3>
+    <ul>
+      <li>Cirkulær vejledning</li>
+      <li>Cirkulært iværksætteri</li>
+      <li>Cirkulære workshops</li>
+      <li>Adgang til nyeste forskning</li>
+      <li>Cirkulære foredrag</li>
+      <li>Circular skills</li>
+    </ul>
+    <a href="events_view.astro" class="cta-button">Se vores events</a>
+  </div>
+    <div>
+         <img src="/billedsamling/cirkler.svg" alt="billede" class="circle-graphic" />
+    </div>
+ </section>
+
+<section class="farve">
+  <div>
+    <h2>Praktisk information</h2>
+    <p>Åbningstider: Mandag til fredag kl. 8.30 – 22.00 <p/>
+<p>Du er altid velkommen i labbet, når der ikke er undervisning, workshops eller events.</p>
+<p>Vejledning: Tider for sparring med Lab Manager – se kalenderen.</p>
+
+<h3>Kontakt</h3>
+<p>Nikolaj Storm Hauge Tost</p>
+<p>Email: nito@kea.dk</p>
+<p>Spørgsmål omkring cirkularitet, labbet eller input til aktiviteter i labbet, kan du/I altid kontakte os på:
+Email: Circular@kea.dk.</p>
+</div>
+<div>  
+  <img src="/billedsamling/adresse.webp" alt="billede" class="kort" />
+</div>
+
+</section>
+
+<section class="matriale-section">
+    <div>
+      <img src="/billedsamling/matriale.webp" alt="billede" class="matriale"/>
+    </div>
+    <div>
+    <h2>Material Connexion</h2>
+    <h3>Material ConneXion – dit materialeunivers</h3>
+    <p>Få adgang til over 500 fysiske materialeprøver og en digital database med 10.000+ innovative og bæredygtige materialer – fra biobaserede plasttyper til genanvendte metaller og meget mere.
+Kom forbi det fysiske bibliotek på Campus Guldbergsgade og udforsk materialer på tæt hold. Som KEA-studerende eller underviser har du også adgang til den digitale database via KEAs Bibliotek.</p>
+
+<p>Åbningstider: Mandag til fredag kl. 8.30 – 22.00</p>
+
+ <a href="events_view.astro" class="cta-button">Tilmed dig</a>
+</div>
+</section>
 </Layout>
+
+<style>
+
+  .circular-lab {
+  max-width: 800px;
+  padding-left: 70px;
+  }
+
+  .drop-down{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 70px;
+  }
+
+  .drop-down > div {
+  flex: 1;
+  min-width: 280px;
+}
+
+  .farve {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F04E98;
+    padding: 20px;
+    min-height: 400px; 
+    margin: 20px auto;
+  }
+
+  .matriale-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    min-height: 400px; 
+    margin: 20px auto;
+  }
+
+  .farve img{
+    width: 40%;
+    height: auto;
+  }
+
+  .kort{
+    margin-left: 80px;
+  }
+  
+  .circle-graphic {
+     width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #FF7500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+  margin: 40px auto;
+  text-align: center;
+width: fit-content;
+
+  }
+  .cta-button:hover {
+    background-color: #FF7500;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+ 
+</style>
